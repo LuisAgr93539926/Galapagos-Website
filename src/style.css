@@ -1,0 +1,413 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+/* HEADER (Navigation) */
+header {
+  background-color: #ffffff;
+  padding: 30px 0;
+}
+/* Main body */
+body{
+  background-color: #000000;
+  color: white;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation header */
+nav {
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-group li {
+  margin-right: 20px;  /* Add right margin to list items */
+}
+
+.nav-group li:last-child {
+  margin-right: 0;  /* Remove right margin from the last list item */
+}
+
+nav a {
+  color: #000000; 
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.nav-group a:hover {
+  color: #00653e; 
+}
+
+.join-button {
+  background-color: #00653e; 
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #004b2d; 
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer h2 {
+  margin-bottom: 20px;
+}
+
+footer form input[type="email"] {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+
+footer form input[type="submit"]{
+  background-color: #00653e; 
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+footer form input[type="submit"]:hover {
+  background-color: #004b2d; 
+}
+
+/* INDEX */
+/* image header in index */
+.main-head-image {
+  position: relative;
+  width: 100%;
+  height: 900px;
+
+  background-image: url("../gallery/green-sea-turtle-isabela-island-galapagos_16x9.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.main-head-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.img-header-content {
+  position: relative;
+  z-index: 1; 
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  font-size: 1.5em;
+  
+}
+
+/* Home (index.html */
+
+/* Carousel of images */
+
+.container {
+	padding: 2rem;
+  background-color: #222;
+}
+
+.carousel {
+	position: relative;
+	max-width: 100rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	/* box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25); */
+  /* box-shadow: 0 1.5rem 3rem 1rem rgba(0,0,0,0.5); */
+  /* box-shadow:  0px 15px 5px rgba(0,0,0,0.9); */
+  
+  /* box-shadow:  100px 150px -50px rgba(0,0,0,1); */
+	border-radius: 0.5rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+  z-index: 1;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+/* Ecuador div with 3 bulleted points in index */
+/* .ecuador-div img {
+  width: 100%;
+  height: auto;
+} */
+
+
+.ecuador-div {
+  background-color: #4C6B88;
+  display: flex;
+  justify-content: space-between;
+  height: 800px;
+  align-items: stretch; /* Makes image and ul the same height */
+}
+
+.ecuador-div img {
+  flex: 0 0 50%; /* This will make the image take up 50% of the container */
+  max-width: 100%; /* This will make sure the image scales and does not overflow its container */
+  height: auto;
+  width: auto;
+  object-fit: cover; /* Ensures the aspect ratio of the image is maintained while filling the height of the container */
+}
+
+.ecuador-div ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ecuador-div ul li {
+  margin-bottom: 10px; /* Increases the separation between each list item */
+  text-align: justify;  /* Justifies the text */
+  width: 100%;
+  padding: 10px;
+  list-style-type: none;
+}
+
+/* What is galapagos div */
+.what-is-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  height: 550px;
+}
+
+.what-is-div h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.what-is-div p {
+  text-align: center;
+  line-height: 1.5;
+  width: 60%;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* INFO.HTML */
+/* History Section */
+
+.history {
+  background-color: #4f5c69;
+  display: flex;
+  justify-content: space-between;
+  height: 800px;
+  align-items: stretch; /* Makes image and ul the same height */
+}
+
+.history img {
+  max-height: 85%;
+  object-fit: cover;/* Ensures the image covers the whole area of its parent */
+  padding-left: 40px;
+  align-self: flex-end; /* Aligns the image to the bottom of the div */
+}
+
+.history-content ul {
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5em;
+  font-family: 'Poppins', sans-serif;
+  width: 70%; 
+  max-width: 800px; 
+  margin: 0 auto; /* Centers the text block horizontally */
+}
+
+.history-content ul li {
+  margin-bottom: 10px; /* Increases the separation between each list item */
+  width: 100%;
+  padding: 10px;
+  list-style-type: none;
+  text-align: right;
+}
+
+.history-content h2 {
+  padding-top: 50px;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: right;
+  width: 90%; 
+  margin-bottom: 30px;
+}
+
+.history-content li {
+  margin-bottom: 20px; 
+}
+
+
+/* Costs and tips secton */
+.cards {
+  max-height: 800px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: row;
+  font-family: 'Poppins', sans-serif;
+  background-color: #161617;
+}
+
+.tips, .costs {
+  background-color: rgb(0, 0, 0);
+  border-radius: 40px;
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  padding: 20px;
+  max-width: 500px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.tips:hover, .costs:hover {
+  background-color: darkgreen;
+  transform: scale(1.05);
+}
+
+.tips.expand, .costs.expand {
+  flex-grow: 1;
+}
+
+.tips h3, .costs h3 {
+  text-align: center;
+  width: 100%;
+  font-size: 1.5em;
+  transition: opacity 0.3s;
+}
+
+.tips.expand h3, .costs.expand h3 {
+  opacity: 0;
+}
+
+.tips p, .costs p {
+  text-align: justify;
+  transition: opacity 0.3s;
+}
+
+.tips.expand p, .costs.expand p {
+  opacity: 1;
+}
+ .consider, .activities, .attractions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  height: 100%;
+}
+
+.consider h2, .activities h2, .attractions h2 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.consider p, .activities p, .attractions p {
+  text-align: center;
+  line-height: 1.5;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+ .consider h3, .activities h3, .attractions h3, .consider ul, .activities ul, .attractions ul {
+  text-align: center;
+  line-height: 1.5;
+  width: 60%;
+  font-family: 'Poppins', sans-serif;
+  list-style-type: none;
+}
+
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+  .tips-costs {
+    flex-direction: column;  /* Arrange the divs vertically on small screens */
+  }
+
+  .tips, .costs {
+    width: 100%;  /* Make the divs take up the full width on small screens */
+    margin-bottom: 20px;  /* Add some vertical space between the divs */
+  }
+}
+
