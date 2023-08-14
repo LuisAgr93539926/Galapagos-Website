@@ -1,27 +1,36 @@
+/* Import the Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
-*{
-    margin: 0px;
-    padding: 0px;
+/* Global styles */
+
+/* Zero out margins and padding, set the default font, and apply box-sizing to all elements */
+* {
+    margin: 0;
+    padding: 0;
     font-family: 'Popins', sans-serif;
     box-sizing: border-box;
 }
 
-a{
+/* Remove underlines from all links */
+a {
     text-decoration: none;
 }
 
-#testimonials{
-    display:flex;
+/* Testimonials section */
+
+/* Center and stack the testimonials section vertically */
+#testimonials {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
 }
 
-.testimonial-heading{
-    letter-spacing:1px;
-    margin:  30px 0px;
+/* Space out and center the testimonial heading */
+.testimonial-heading {
+    letter-spacing: 1px;
+    margin: 30px 0;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
@@ -29,7 +38,8 @@ a{
     align-items: center;
 }
 
-.testimonial-heading h1{
+/* Style the testimonial heading text */
+.testimonial-heading h1 {
     font-size: 2.2rem;
     font-weight: 500;
     background-color: #202020;
@@ -37,7 +47,8 @@ a{
     padding: 10px 20px;
 }
 
-.testimonial-heading span{
+/* Style the testimonial subheading text */
+.testimonial-heading span {
     font-size: 1.3rem;
     color: #252525;
     margin-bottom: 10px;
@@ -45,16 +56,17 @@ a{
     text-transform: uppercase;
 }
 
-.testimonial-box-container{
-    display:flex;
+/* Center and stretch the testimonial boxes */
+.testimonial-box-container {
+    display: flex;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
     width: 100%;
-    
 }
 
-.testimonial-box{
+/* Style the testimonial boxes */
+.testimonial-box {
     width: 500px;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
@@ -62,6 +74,66 @@ a{
     margin: 15px;
     cursor: pointer;
     border-radius: 20px;
+}
+
+/* More styles here... */
+
+/* Give review section */
+
+/* Center and stack the give review section vertically */
+.give-review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 30px 0;
+    color: black;
+}
+
+/* Style the give review label */
+.give-review label {
+    font-weight: bolder;
+}
+
+/* Style the give review text input and select input */
+.give-review input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style the give review submit button */
+.give-review input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Change the background color of the give review submit button on hover */
+.give-review input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Style the comment textarea */
+#comments {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 200px;
 }
 
 .profile-image{
@@ -120,54 +192,3 @@ a{
     transform: translateY(-10px);
     transition: all ease 0.3s;
 }
-
-/* Give review section */
-.give-review{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin:  30px 0px;
-    color: black;
-}
-
-.give-review label{
-    font-weight: bolder;
-}
-.give-review input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .give-review input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .give-review input[type=submit]:hover {
-    background-color: #45a049;
-  }
-
-  #comments{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    height: 200px;
-  }
-  

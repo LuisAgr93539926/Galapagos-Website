@@ -1,152 +1,172 @@
+/* History Section */
 
-  /* INFO.HTML */
-  /* History Section */
-  
-  .history {
-    background-color: #4f5c69;
-    display: flex;
-    justify-content: space-between;
-    height: 800px;
-    align-items: stretch; /* Makes image and ul the same height */
-  }
-  
-  .history img {
-    max-height: 85%;
-    object-fit: cover;/* Ensures the image covers the whole area of its parent */
-    padding-left: 40px;
-    align-self: flex-end; /* Aligns the image to the bottom of the div */
-  }
-  
-  .history-content ul {
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1.5em;
-    font-family: 'Poppins', sans-serif;
-    width: 70%; 
-    max-width: 800px; 
-    margin: 0 auto; /* Centers the text block horizontally */
-  }
-  
-  .history-content ul li {
-    margin-bottom: 10px; /* Increases the separation between each list item */
-    width: 100%;
-    padding: 10px;
-    list-style-type: none;
-    text-align: right;
-  }
-  
-  .history-content h2 {
-    padding-top: 50px;
-    font-size: 4em;
-    font-weight: bold;
-    text-align: right;
-    width: 90%; 
-    margin-bottom: 30px;
-  }
-  
-  .history-content li {
-    margin-bottom: 20px; 
-  }
-  
-  
-  /* Costs and tips secton */
-  .cards {
-    max-height: auto;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    flex-direction: row;
-    font-family: 'Poppins', sans-serif;
-    background-color: #142a13;
-  }
-  
-  .tips,
-  .costs,
-  .activities,
-  .attractions {
-    background-color: #161617;
-    border-radius: 40px;
-    flex: 1;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 500px;
-    transition: background-color 0.3s, transform 0.3s;
-    cursor: pointer;
-    overflow: hidden;
-  }
-  
-  .tips:hover,
-  .costs:hover,
-  .activities:hover,
-  .attractions:hover {
-    background-color: darkgreen;
-    transform: scale(1.02);
-  }
-  
-  .activities ul{
-    text-align: left;
-  }
-  
-  /* Location section */
-  .location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 1000px;
-    background-color: #161617;
-    
-  }
-  
-  .location h2 {
-    font-size: 48px;
-    text-align: center;
-    padding-bottom: 100px;
-  }
-  
-  .location iframe {
-    width: 50%;
-    height: 50%;
-    border-radius: 10px;
-  }
+/* Defines the container for the history section */
+.history {
+  background-color: #4f5c69;
+  display: flex;
+  justify-content: space-between;
+  height: 800px;
+  align-items: stretch; /* Ensures the child elements stretch to fill the container */
+}
+
+/* Styles the image in the history section */
+.history img {
+  max-height: 85%;
+  object-fit: cover; /* Ensures the image covers the whole area of its parent */
+  padding-left: 40px;
+  align-self: flex-end; /* Aligns the image to the bottom of the container */
+}
+
+/* Styles the list in the history section */
+.history-content ul {
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5em;
+  font-family: 'Poppins', sans-serif;
+  width: 70%; 
+  max-width: 800px; 
+  margin: 0 auto; /* Centers the list horizontally within the container */
+}
+
+/* Styles the list items in the history section */
+.history-content ul li {
+  margin-bottom: 10px; /* Adds some space between list items */
+  width: 100%;
+  padding: 10px;
+  list-style-type: none; /* Removes the default list item bullet points */
+  text-align: right;
+}
+
+/* Styles the header in the history section */
+.history-content h2 {
+  padding-top: 50px;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: right;
+  width: 90%; 
+  margin-bottom: 30px;
+}
+
+/* Increases the separation between each list item */
+.history-content li {
+  margin-bottom: 20px; 
+}
+
+/* Costs and tips section */
+
+/* Defines the container for the cards */
+.cards {
+  max-height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: row;
+  font-family: 'Poppins', sans-serif;
+  background-color: #142a13;
+}
+
+/* Styles each card */
+.tips,
+.costs,
+.activities,
+.attractions {
+  background-color: #161617;
+  border-radius: 40px;
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 500px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Adds hover effect to each card */
+.tips:hover,
+.costs:hover,
+.activities:hover,
+.attractions:hover {
+  background-color: darkgreen;
+  transform: scale(1.02);
+}
+
+/* Aligns the text to the left in the activities card */
+.activities ul{
+  text-align: left;
+}
+
+/* Location section */
+
+/* Defines the container for the location section */
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 1000px;
+  background-color: #161617;
+}
+
+/* Styles the header in the location section */
+.location h2 {
+  font-size: 48px;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+/* Styles the iframe in the location section */
+.location iframe {
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+}
 
 /* Mobile styling */
+
+/* Styles for screens smaller than or equal to 768px */
 @media (max-width: 768px) {
-  .history {
-    flex-direction: column; /* Stack the image and the ul vertically */
-    height: auto; /* Let the height adjust automatically */
-  }
 
-  .history img {
-    max-height: 100%; /* Let the image take up the full height */
-    padding-left: 20px; /* Reduce padding on small screens */
-    padding-top: 20px; /* Add some top padding */
-  }
+/* Changes layout of the history section for smaller screens */
+.history {
+  flex-direction: column; /* Stacks the image and list vertically */
+  height: auto; /* Allows the height to adjust automatically */
+}
 
-  .history-content ul {
-    font-size: 1.2em; /* Reduce font size on small screens */
-    width: 90%; /* Let the text take up more width on small screens */
-  }
+/* Changes styles of the image in the history section for smaller screens */
+.history img {
+  max-height: 100%; /* Allows the image to take up the full height */
+  padding-left: 20px; /* Reduces left padding */
+  padding-top: 20px; /* Adds some top padding */
+}
 
-  .history-content h2 {
-    font-size: 3em; /* Reduce font size on small screens */
-    padding-top: 20px; /* Reduce padding on small screens */
-  }
+/* Changes styles of the list in the history section for smaller screens */
+.history-content ul {
+  font-size: 1.2em; /* Reduces font size */
+  width: 90%; /* Allows the text to take up more width */
+}
 
-  .cards {
-    flex-direction: column; /* Stack the cards vertically */
-    padding: 10px; /* Reduce padding on small screens */
-  }
+/* Changes styles of the header in the history section for smaller screens */
+.history-content h2 {
+  font-size: 3em; /* Reduces font size */
+  padding-top: 20px; /* Reduces top padding */
+}
 
-  .tips,
-  .costs,
-  .activities,
-  .attractions {
-    flex: none; /* Let the cards adjust their size automatically */
-    width: 100%; /* Let the cards take up the full width */
-    margin-bottom: 20px; /* Add some bottom margin to separate the stacked cards */
-  }
+/* Changes layout of the cards for smaller screens */
+.cards {
+  flex-direction: column; /* Stacks the cards vertically */
+  padding: 10px; /* Reduces padding */
+}
+
+/* Changesstyles of the cards for smaller screens */
+.tips,
+.costs,
+.activities,
+.attractions {
+  flex: none; /* Allows the cards to adjust their size automatically */
+  width: 100%; /* Allows the cards to take up the full width */
+  margin-bottom: 20px; /* Adds some bottom margin to separate the stacked cards */
+}
 }

@@ -1,55 +1,81 @@
+/* Set the default text color to black, background color, font size, and line spacing for the entire document */
 body {
     color: black;
-    /* Add the following lines to make the font size responsive */
+    background-color: rgb(250, 250, 250);
     font-size: 18px;
     line-height: 1.6;
 }
 
+/* Section-level formatting: columns, centering, padding, width, and automatic height */
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em; /* Use em instead of px for responsive spacing */
-    max-height: auto;
-    width: 90%; /* prevent content from touching the edges */
-    margin: 0 auto; /* center the section */
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Align children along the cross-axis (horizontal centering) */
+    justify-content: center; /* Align children along the main axis (vertical centering) */
+    padding: 2em; /* Add space around the content */
+    max-height: auto; /* Allow the section height to adjust automatically */
+    width: 90%; /* Set the section width to 90% of the parent width */
+    margin: 0 auto; /* Center the section horizontally */
 }
 
+/* Formatting for h2 elements: font size, weight, alignment, and bottom margin */
 h2 {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 2em; /* Double the font size */
+    font-weight: bold; /* Make the font weight bold */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add space below the element */
 }
 
+/* Formatting for paragraphs: alignment, line height, width, and font */
 p {
-    text-align: center;
-    line-height: 1.5;
-    width: 100%; /* make paragraphs take up full width on small screens */
-    font-family: 'Poppins', sans-serif;
+    text-align: center; /* Center the text */
+    line-height: 1.5; /* Set the space between lines of text */
+    width: 100%; /* Make paragraphs take up the full width */
+    font-family: 'Poppins', sans-serif; /* Set the font */
 }
 
+/* Formatting for unordered lists: font and left padding */
 ul {
-    font-family: 'Poppins', sans-serif;
-    padding-left: 1em; /* add some left padding to ul */
+    font-family: 'Poppins', sans-serif; /* Set the font */
+    padding-left: 1em; /* Add space to the left of the list */
 }
 
-/* Add a media query for larger screens */
+/* Formatting for elements with 'about', 'honesty', and 'thanks' classes */
+.about,
+.honesty,
+.thanks {
+    border-radius: 40px; /* Round the corners */
+    width: 100%; /* Let them take up the full width on small screens */
+    padding: 1em; /* Add space around the content */
+    margin: 1em auto; /* Center them horizontally and add some vertical space between them */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.about{
+    background-color: aliceblue; /* Set the background color */
+}
+.honesty{
+    background-color:antiquewhite; /* Set the background color */
+}
+.thanks{
+    background-color: rgb(240, 255, 246); /* Set the background color */
+}
+
+
+/* Media query for screens 768px and larger */
 @media (min-width: 768px) {
-    section {
-        width: 70%; /* increase width for larger screens */
-    }
-
-    p {
-        width: 60%; /* make paragraphs narrower on large screens */
+    /* Formatting for 'about', 'honesty', and 'thanks' classes on large screens */
+    .about,
+    .honesty,
+    .thanks {
+        width: 70%; /* Make them narrower on larger screens */
+        padding: 2em; /* Increase padding on larger screens */
     }
 }
 
+/* Formatting for elements with 'videos' class */
 .videos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 1em;
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow the videos to wrap onto multiple lines if needed */
+    justify-content: space-around; /* Distribute space around the videos evenly */
 }
