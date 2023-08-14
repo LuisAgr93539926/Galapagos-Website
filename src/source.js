@@ -1,8 +1,3 @@
-// Reviews (reviews.html)
-const { reviews } = window;
-
-console.log({reviews}, "Data");
-
 document.addEventListener('DOMContentLoaded', (event) => {
   // Get the reviews container
   const reviewsContainer = document.getElementById('reviews-container');
@@ -51,4 +46,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
       <p>${review.description}</p>
     </div>
   </div>`;
+
+  // Append the reviewDiv to the reviewsContainer
+  reviewsContainer.appendChild(reviewDiv);
 })})
+
