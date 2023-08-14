@@ -2,15 +2,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Get the reviews container
   const reviewsContainer = document.getElementById('reviews-container');
 
-  // Loop through each review in the reviews array
-  window.reviews.forEach((review) => {
-    // Create a new div for each review
-    const reviewDiv = document.createElement('div');
-    reviewDiv.className = 'review';
-
+  // Function to add a review
+  function addReview(review) {
     // Initialize the stars string
     let stars = '';
-
     // Loop 5 times to generate the full or empty stars
     for(let i = 1; i <= 5; i++) {
         if(i <= review.rating) {
@@ -22,10 +17,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
+    // Create a new div for each review
+    const reviewDiv = document.createElement('div');
+    reviewDiv.className = 'testimonial-box';
+
     // Add the review name, date, rating, and description
     reviewDiv.innerHTML = `
-    <div class="testimonial-box">
-    <!-- top -->
     <div class="box-top">
       <div class="profile">
         <div class="profile-image">
@@ -43,11 +40,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
     </div>
     <!-- Bottom (Comments) -->
     <div class="client-comments">
-      <p>${review.description}</p>
-    </div>
-  </div>`;
+      <p>${review.comments}</p>
+    </div>`;
 
-  // Append the reviewDiv to the reviewsContainer
-  reviewsContainer.appendChild(reviewDiv);
-})})
+    // Append the reviewDiv to the reviewsContainer
+    reviewsContainer.appendChild(reviewDiv);
+  }
 
+  // Add initial reviews
+  window.reviews.forEach(addReview);
+
+  // Get the form and add a submit event listener
+  const reviewForm = document.getElementById('review-form');
+  reviewForm.addEventListener('submit', function(event) {
+    // Prevent the form from submitting normally
+    event.preventDefault();
+
+    // Create a new review object from the form input values
+    const review = {
+      name: reviewForm.name.value,
+      rating: reviewForm.rating.value,
+      comments: reviewForm.comments.value,
+      date: new Date().toLocaleDateString(),
+    };
+
+    // Add the new review
+    addReview(review);
+
+    // Clear the form input values
+    reviewForm.reset();
+  });
+});
