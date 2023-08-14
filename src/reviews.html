@@ -3,16 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="stylereviews.css" />
   <title>Reviews</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="stylereviews.css" />
+  <!-- Using font awesome for stars -->
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
+<header>
+  <nav>
+    <ul>
+      <div class="nav-group">
+        <li><a href="index.html" class="nav-links">HOME</a></li>
+        <li><a href="info.html" class="nav-links">MORE</a></li>
+        <li><a href="about.html" class="nav-links">ABOUT ME</a></li>
+        <li><a href="reviews.html" class="nav-links">REVIEWS</a></li>
+      </div>
+      <li><a href="#join" class="join-button">Join</a></li>
+    </ul>
+  </nav>
+</header>
 <body>
   <!-- Reviews -->
   <section id="testimonials">
+    <!-- heading -->
     <div class="testimonial-heading">
       <span>Comments</span>
       <h1>Clients Says</h1>
     </div>
+    <!-- testimonials-box-container -->
+    <div class="testimonial-box-container">
+      <div id="reviews-container"></div>
+    </div>
   </section>
+  <script src="reviews.js"></script>
+  <script src="source.js"></script>
 </body>
+<footer id="join">
+  <h2>Join our Newsletter!</h2>
+  <form action="https://httpbin.org/post" method="post">
+    <input type="email" id="email" name="email" required placeholder="Your email address">
+    <input type="hidden" id="name" name="name" value="Your Name">
+    <input type="submit" value="Join">
+  </form>
+</footer>
+
 </html>

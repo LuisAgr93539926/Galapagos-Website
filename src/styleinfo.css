@@ -1,0 +1,114 @@
+
+  /* INFO.HTML */
+  /* History Section */
+  
+  .history {
+    background-color: #4f5c69;
+    display: flex;
+    justify-content: space-between;
+    height: 800px;
+    align-items: stretch; /* Makes image and ul the same height */
+  }
+  
+  .history img {
+    max-height: 85%;
+    object-fit: cover;/* Ensures the image covers the whole area of its parent */
+    padding-left: 40px;
+    align-self: flex-end; /* Aligns the image to the bottom of the div */
+  }
+  
+  .history-content ul {
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    width: 70%; 
+    max-width: 800px; 
+    margin: 0 auto; /* Centers the text block horizontally */
+  }
+  
+  .history-content ul li {
+    margin-bottom: 10px; /* Increases the separation between each list item */
+    width: 100%;
+    padding: 10px;
+    list-style-type: none;
+    text-align: right;
+  }
+  
+  .history-content h2 {
+    padding-top: 50px;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: right;
+    width: 90%; 
+    margin-bottom: 30px;
+  }
+  
+  .history-content li {
+    margin-bottom: 20px; 
+  }
+  
+  
+  /* Costs and tips secton */
+  .cards {
+    max-height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    background-color: #142a13;
+  }
+  
+  .tips,
+  .costs,
+  .activities,
+  .attractions {
+    background-color: #161617;
+    border-radius: 40px;
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 500px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .tips:hover,
+  .costs:hover,
+  .activities:hover,
+  .attractions:hover {
+    background-color: darkgreen;
+    transform: scale(1.02);
+  }
+  
+  .activities ul{
+    text-align: left;
+  }
+  
+  /* Location section */
+  .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 1000px;
+    background-color: #161617;
+    
+  }
+  
+  .location h2 {
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 100px;
+  }
+  
+  .location iframe {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+  }

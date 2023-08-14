@@ -9,47 +9,46 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // Loop through each review in the reviews array
   window.reviews.forEach((review) => {
-      // Create a new div for each review
-      const reviewDiv = document.createElement('div');
-      reviewDiv.className = 'review';
+    // Create a new div for each review
+    const reviewDiv = document.createElement('div');
+    reviewDiv.className = 'review';
 
-      // Add the review name, date, rating, and description
-      reviewDiv.innerHTML = `
-          <h2>${review.name}</h2>
-          <p>${new Date(review.date).toLocaleDateString()}</p>
-          <p>Rating: ${'⭐'.repeat(review.rating)}</p>
-          <p>${review.description}</p>
-      `;
+    // Initialize the stars string
+    let stars = '';
 
-      // Create a link for the review
-      const reviewLink = document.createElement('a');
-      reviewLink.href = review.link[0].url;
-      reviewLink.textContent = review.link[0].urlName;
-      reviewLink.target = '_blank';
-      reviewLink.rel = 'noopener';
+    // Loop 5 times to generate the full or empty stars
+    for(let i = 1; i <= 5; i++) {
+        if(i <= review.rating) {
+            // Add a full star if i is less than or equal to the rating
+            stars += '<i class="fas fa-star"></i>';
+        } else {
+            // Add an empty star if i is greater than the rating
+            stars += '<i class="far fa-star"></i>';
+        }
+    }
 
-      // Add the link to the review div
-      reviewDiv.appendChild(reviewLink);
-
-      // Add the review div to the reviews container
-      reviewsContainer.appendChild(reviewDiv);
-
-      console.log(review.name);
-  });
-});
-
-// Home (index.html)
-var images = Array.from(document.querySelectorAll('.carousel__image'));
-var currentIndex = 0;
-
-document.querySelector('.carousel__button--prev').addEventListener('click', function() {
-    images[currentIndex].style.display = 'none';
-    currentIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-    images[currentIndex].style.display = 'block';
-});
-
-document.querySelector('.carousel__button--next').addEventListener('click', function() {
-    images[currentIndex].style.display = 'none';
-    currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-    images[currentIndex].style.display = 'block';
-});
+    // Add the review name, date, rating, and description
+    reviewDiv.innerHTML = `
+    <div class="testimonial-box">
+    <!-- top -->
+    <div class="box-top">
+      <div class="profile">
+        <div class="profile-image">
+          <img src="../gallery/pp.png" alt="default pic">
+        </div>
+        <div class="name-user">
+          <strong>${review.name}</strong>
+          <span>${review.date}</span>
+        </div>
+      </div>
+      <!-- stars -->
+      <div class="reviews">
+          ${stars}
+      </div>
+    </div>
+    <!-- Bottom (Comments) -->
+    <div class="client-comments">
+      <p>${review.description}</p>
+    </div>
+  </div>`;
+})})
