@@ -112,3 +112,41 @@
     height: 50%;
     border-radius: 10px;
   }
+
+/* Mobile styling */
+@media (max-width: 768px) {
+  .history {
+    flex-direction: column; /* Stack the image and the ul vertically */
+    height: auto; /* Let the height adjust automatically */
+  }
+
+  .history img {
+    max-height: 100%; /* Let the image take up the full height */
+    padding-left: 20px; /* Reduce padding on small screens */
+    padding-top: 20px; /* Add some top padding */
+  }
+
+  .history-content ul {
+    font-size: 1.2em; /* Reduce font size on small screens */
+    width: 90%; /* Let the text take up more width on small screens */
+  }
+
+  .history-content h2 {
+    font-size: 3em; /* Reduce font size on small screens */
+    padding-top: 20px; /* Reduce padding on small screens */
+  }
+
+  .cards {
+    flex-direction: column; /* Stack the cards vertically */
+    padding: 10px; /* Reduce padding on small screens */
+  }
+
+  .tips,
+  .costs,
+  .activities,
+  .attractions {
+    flex: none; /* Let the cards adjust their size automatically */
+    width: 100%; /* Let the cards take up the full width */
+    margin-bottom: 20px; /* Add some bottom margin to separate the stacked cards */
+  }
+}

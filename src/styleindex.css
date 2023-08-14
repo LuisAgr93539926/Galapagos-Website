@@ -163,4 +163,38 @@
     font-family: 'Poppins', sans-serif;
   }
   
-  
+  /* Mobile friendlyness */
+/* Existing styles... */
+
+/* Mobile styling */
+@media (max-width: 768px) {
+  .ecuador-div {
+    flex-direction: column; /* Stack the image and the ul vertically */
+    height: auto; /* Let the height adjust automatically */
+  }
+
+  .ecuador-div img, .ecuador-div ul {
+    flex: 1 0 100%; /* Let both the image and the ul take up the full width */
+  }
+
+  .ecuador-div ul {
+    padding: 30px; /* Reduce padding on small screens */
+  }
+
+  .ecuador-div ul li {
+    font-size: 0.9em; /* Reduce font size on small screens */
+  }
+
+  .what-is-div {
+    padding: 50px; /* Reduce padding on small screens */
+    height: auto; /* Let the height adjust automatically */
+  }
+
+  .what-is-div h1 {
+    font-size: 2em; /* Reduce font size on small screens */
+  }
+
+  .what-is-div p {
+    width: 100%; /* Let the text take up the full width on small screens */
+  }
+}

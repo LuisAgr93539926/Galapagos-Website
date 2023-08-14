@@ -1,0 +1,55 @@
+body {
+    color: black;
+    /* Add the following lines to make the font size responsive */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em; /* Use em instead of px for responsive spacing */
+    max-height: auto;
+    width: 90%; /* prevent content from touching the edges */
+    margin: 0 auto; /* center the section */
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    line-height: 1.5;
+    width: 100%; /* make paragraphs take up full width on small screens */
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    font-family: 'Poppins', sans-serif;
+    padding-left: 1em; /* add some left padding to ul */
+}
+
+/* Add a media query for larger screens */
+@media (min-width: 768px) {
+    section {
+        width: 70%; /* increase width for larger screens */
+    }
+
+    p {
+        width: 60%; /* make paragraphs narrower on large screens */
+    }
+}
+
+.videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+}
