@@ -1,7 +1,7 @@
 /* Set the default text color to black, background color, font size, and line spacing for the entire document */
 body {
     color: black;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(255, 255, 255);
     font-size: 18px;
     line-height: 1.6;
 }
@@ -49,6 +49,7 @@ ul {
     padding: 1em; /* Add space around the content */
     margin: 1em auto; /* Center them horizontally and add some vertical space between them */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1); /* shadow */
 }
 
 .about{

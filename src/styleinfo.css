@@ -2,7 +2,7 @@
 
 /* Defines the container for the history section */
 .history {
-  background-color: #4f5c69;
+  background-color: #161617;
   display: flex;
   justify-content: space-between;
   height: 800px;
@@ -50,52 +50,6 @@
 /* Increases the separation between each list item */
 .history-content li {
   margin-bottom: 20px; 
-}
-
-/* Costs and tips section */
-
-/* Defines the container for the cards */
-.cards {
-  max-height: auto;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  flex-direction: row;
-  font-family: 'Poppins', sans-serif;
-  background-color: #142a13;
-}
-
-/* Styles each card */
-.tips,
-.costs,
-.activities,
-.attractions {
-  background-color: #161617;
-  border-radius: 40px;
-  flex: 1;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  max-width: 500px;
-  transition: background-color 0.3s, transform 0.3s;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-/* Adds hover effect to each card */
-.tips:hover,
-.costs:hover,
-.activities:hover,
-.attractions:hover {
-  background-color: darkgreen;
-  transform: scale(1.02);
-}
-
-/* Aligns the text to the left in the activities card */
-.activities ul{
-  text-align: left;
 }
 
 /* Location section */
@@ -159,14 +113,81 @@
   flex-direction: column; /* Stacks the cards vertically */
   padding: 10px; /* Reduces padding */
 }
-
-/* Changesstyles of the cards for smaller screens */
-.tips,
-.costs,
-.activities,
-.attractions {
-  flex: none; /* Allows the cards to adjust their size automatically */
-  width: 100%; /* Allows the cards to take up the full width */
-  margin-bottom: 20px; /* Adds some bottom margin to separate the stacked cards */
 }
+
+/* Cards section */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding: 20px;
+  background-color: #161617;
+}
+
+ 
+.card{
+  position: relative; /* Change from absolute to relative */
+  width: 250px; /* Set a specific size for your card */
+  height: 320px; /* Set a specific size for your card */
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  color: #000000;
+}
+
+#costs{
+  width: 400px; /* Set a specific size for your card */
+  height: 500px; /* Set a specific size for your card */
+}
+
+#tips{
+  width: 400px; /* Set a specific size for your card */
+  height: 500px; /* Set a specific size for your card */
+}
+
+#attractions{
+  width: 400px; /* Set a specific size for your card */
+  height: 500px; /* Set a specific size for your card */
+}
+
+
+.container{
+  display: flex; /* Allows child elements to lay out along a line */
+  flex-wrap: wrap; /* Allows the items to wrap onto multiple lines if they run out of space */
+  justify-content: center; /* Aligns items along the horizontal line in the center */
+  width: 100%; /* Take up as much width as possible */
+  gap: 20px; /* Space between each card */
+}
+
+
+
+.card:hover{
+  transform: rotateY(180deg);
+}
+
+.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #00653E;
+  color: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bolder;
+  display: flex; /* Establishes a flex context for its direct children */
+  justify-content: center; /* Aligns children along the horizontal line in the center */
+  align-items: center; /* Aligns children along the vertical line in the center */
+}
+
+.back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #078253;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  border-radius: 20px;
+  padding: 25px;
 }
