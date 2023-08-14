@@ -314,100 +314,64 @@ footer form input[type="submit"]:hover {
 
 /* Costs and tips secton */
 .cards {
-  max-height: 800px;
+  max-height: auto;
   display: flex;
   justify-content: center;
   padding: 20px;
   flex-direction: row;
   font-family: 'Poppins', sans-serif;
-  background-color: #161617;
+  background-color: #142a13;
 }
 
-.tips, .costs {
-  background-color: rgb(0, 0, 0);
+.tips,
+.costs,
+.activities,
+.attractions {
+  background-color: #161617;
   border-radius: 40px;
   flex: 1;
   margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  color: white;
   padding: 20px;
   max-width: 500px;
   transition: background-color 0.3s, transform 0.3s;
   cursor: pointer;
+  overflow: hidden;
 }
 
-.tips:hover, .costs:hover {
+.tips:hover,
+.costs:hover,
+.activities:hover,
+.attractions:hover {
   background-color: darkgreen;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-.tips.expand, .costs.expand {
-  flex-grow: 1;
+.activities ul{
+  text-align: left;
 }
 
-.tips h3, .costs h3 {
-  text-align: center;
-  width: 100%;
-  font-size: 1.5em;
-  transition: opacity 0.3s;
-}
-
-.tips.expand h3, .costs.expand h3 {
-  opacity: 0;
-}
-
-.tips p, .costs p {
-  text-align: justify;
-  transition: opacity 0.3s;
-}
-
-.tips.expand p, .costs.expand p {
-  opacity: 1;
-}
- .consider, .activities, .attractions {
+/* Location section */
+.location {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 100px;
-  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  height: 1000px;
+  background-color: #161617;
+  
 }
 
-.consider h2, .activities h2, .attractions h2 {
-  font-size: 3em;
-  font-weight: bold;
+.location h2 {
+  font-size: 48px;
   text-align: center;
-  margin-bottom: 20px;
+  padding-bottom: 100px;
 }
 
-.consider p, .activities p, .attractions p {
-  text-align: center;
-  line-height: 1.5;
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
+.location iframe {
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
 }
-
- .consider h3, .activities h3, .attractions h3, .consider ul, .activities ul, .attractions ul {
-  text-align: center;
-  line-height: 1.5;
-  width: 60%;
-  font-family: 'Poppins', sans-serif;
-  list-style-type: none;
-}
-
-
-/* Mobile friendly */
-@media (max-width: 768px) {
-  .tips-costs {
-    flex-direction: column;  /* Arrange the divs vertically on small screens */
-  }
-
-  .tips, .costs {
-    width: 100%;  /* Make the divs take up the full width on small screens */
-    margin-bottom: 20px;  /* Add some vertical space between the divs */
-  }
-}
-
